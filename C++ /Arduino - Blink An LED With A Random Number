@@ -1,0 +1,42 @@
+int my_number = 5;      // Your fixed number
+int my_rand;            // Randomly generated number
+int ledPin = 13;        // Built-in LED pin (on most Arduino boards)
+
+void setup() {
+  Serial.begin(9600);         // Start serial communication
+  pinMode(ledPin, OUTPUT);    // Set LED pin as output
+  randomSeed(analogRead(0));  // Seed the random number generator
+}
+
+void loop() {
+  my_rand = random(0, 10);    // Generate random number between 0 and 9
+
+  // Print the values
+  Serial.print("My number is: ");
+  Serial.println(my_number);
+  Serial.print("Random number is: ");
+  Serial.println(my_rand);
+
+  // Compare using IF / ELSE IF / ELSE
+  if (my_number > my_rand) {
+    Serial.print(my_number);
+    Serial.print(" is greater than ");
+    Serial.println(my_rand);
+    digitalWrite(ledPin, HIGH);   // Turn LED ON
+  }
+else if (my_number == my_rand) {
+    Serial.print(my_number);
+    Serial.print(" is equal to ");
+    Serial.println(my_rand);
+    digitalWrite(ledPin, LOW);    // LED OFF
+  }
+  else {
+    Serial.print(my_number);
+    Serial.print(" is less than ");
+    Serial.println(my_rand);
+    digitalWrite(ledPin, LOW);    // LED OFF
+  }
+
+  Serial.println("----------------------"); // Divider line for readability
+  delay(2000); // Wait 2 seconds before next comparison
+}
