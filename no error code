@@ -1,0 +1,14 @@
+def main():
+    print("Starting The Code Challenge")
+    my_num = input('enter a number > ')
+    try: 
+        my_num = int(my_num)
+        print(my_num, 'is a number')
+    except:
+        print('please a number')
+        print(my_num, 'is not a number')
+    print('done')
+
+    print("Ending The Code Challenge")
+    
+main()
