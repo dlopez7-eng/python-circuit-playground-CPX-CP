@@ -1,0 +1,17 @@
+def main():
+    print("Starting the Safe Math Program")
+    
+    x = input("Enter a number to subtract from 100 > ")
+    
+    try:
+        x = int(x)
+        result = 100 - x
+        print("100 minus", x, "=", result)
+    except:
+        print("Please enter a number")
+        print(x, "is not a number")
+    
+    print("Done")
+    print("Ending the Safe Math Program")
+
+main()
