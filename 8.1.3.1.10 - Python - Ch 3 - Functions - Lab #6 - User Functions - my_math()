@@ -1,0 +1,35 @@
+def my_math(x,y):
+  z = x + y
+  return z
+
+def main():
+  my_num_1 = 5
+  my_num_2 = 2
+  sum = my_math(my_num_1, my_num_2)
+  print("The sum of", my_num_1, "+", my_num_2, "=", sum)
+
+main()
+
+# -----------------------------
+# Challenge #2
+# Create a function that multiplies 2 numbers and returns the result
+
+def multiply_numbers(a, b):
+  result = a * b
+  return result
+
+mult_answer = multiply_numbers(6, 3)
+print("6 * 3 =", mult_answer)
+
+# Challenge #3
+# Create a function that adds 2 numbers and if the result is odd,
+# adds 1, then returns the result
+
+def add_and_fix_odd(a, b):
+  result = a + b
+  if result % 2 != 0:
+    result = result + 1
+  return result
+
+odd_answer = add_and_fix_odd(5, 2)
+print("5 + 2 (fixed if odd) =", odd_answer)
