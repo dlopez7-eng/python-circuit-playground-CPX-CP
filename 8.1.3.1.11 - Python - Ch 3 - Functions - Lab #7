@@ -1,0 +1,72 @@
+def my_math(x, y, operation="add"):
+  if operation == "add":
+    result = x + y
+    print("Addition:", x, "+", y, "=", result)
+  elif operation == "subtract":
+    result = x - y
+    print("Subtraction:", x, "-", y, "=", result)
+  elif operation == "multiply":
+    result = x * y
+    print("Multiplication:", x, "*", y, "=", result)
+  elif operation == "divide":
+    result = x / y
+    print("Division:", x, "/", y, "=", result)
+  else:
+    result = x + y
+    print("Default (Addition):", x, "+", y, "=", result)
+
+  return result
+
+
+def main():
+  my_num_1 = 5
+  my_num_2 = 2
+
+  my_math(my_num_1, my_num_2)                 # Default (Addition)
+  my_math(my_num_1, my_num_2, "subtract")
+  my_math(my_num_1, my_num_2, "multiply")
+  my_math(my_num_1, my_num_2, "divide")
+
+main()
+
+
+
+
+
+def my_math(x, y, operation="add"):
+  if operation == "add":
+    result = x + y
+    print("Addition:", x, "+", y, "=", result)
+  elif operation == "subtract":
+    result = x - y
+    print("Subtraction:", x, "-", y, "=", result)
+  elif operation == "multiply":
+    result = x * y
+    print("Multiplication:", x, "*", y, "=", result)
+  elif operation == "divide":
+    result = x / y
+    print("Division:", x, "/", y, "=", result)
+  else:
+    result = x + y
+    print("Default (Addition):", x, "+", y, "=", result)
+
+  return result
+
+# Challenge #5
+def main():
+
+  # Keep asking until valid numbers are entered
+  while True:
+    try:
+      my_num_1 = float(input("Enter first number: "))
+      my_num_2 = float(input("Enter second number: "))
+      break   # exit loop if successful
+    except ValueError:
+      print("Invalid input. Please enter numbers only.")
+
+  operation = input("Choose operation (add, subtract, multiply, divide): ")
+
+  my_math(my_num_1, my_num_2, operation)
+
+
+main()
