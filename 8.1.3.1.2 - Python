@@ -1,0 +1,19 @@
+def convert_dollars(amount, rate):
+    result = amount * rate
+    return result
+
+
+# Ask user for amount in US dollars
+user_amount = float(input("Enter amount in US dollars: "))
+
+# Conversion rates (example rates)
+can_rate = 1.27
+taiwan_rate = 27.84
+
+# Call the function
+can_money = convert_dollars(user_amount, can_rate)
+taiwan_money = convert_dollars(user_amount, taiwan_rate)
+
+# Print results
+print("Canadian Dollars:", round(can_money, 2))
+print("New Taiwan Dollars:", round(taiwan_money, 2))
