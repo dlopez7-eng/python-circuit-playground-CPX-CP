@@ -1,0 +1,32 @@
+from gpiozero import RGBLED
+from time import sleep
+
+right_eye_led = RGBLED(red="BOARD3", green="BOARD5", blue="BOARD7")
+left_eye_led = RGBLED(red="BOARD8", green="BOARD10", blue="BOARD12")
+
+
+def rgb_255_to_1(rgb):
+    return(r,g,b)
+
+def main():
+    print("Starting Program")
+    eye_command = {"set_left_rgb_eye_color": [30, 17, 55]}
+    print(eye_command)
+    # Extract the "set_right_rgb_eye_color"
+    eye_rgb =
+    eye_rgb = rgb_255_to_1(eye_rgb)
+   
+    # -- How do you normalize one number line to another?
+    # -- You need to take a number from 0-255 and map it to a number between 0-1
+    # eye_rgb = (r,g,b)
+    # return (eye_rgb
+    left_eye_led.color = eye_rgb
+    sleep(5)
+    eye_rgb = [.1,0,.9]  # edit this line to get the normalized RGB values
+    left_eye_led.color = eye_rgb
+    sleep(5)
+    left_eye_led.color = (0,0,0,)
+
+    print("Ending Program")
+
+main()
